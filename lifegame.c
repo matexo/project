@@ -20,6 +20,11 @@ void life(char namein[] , char nameout[] , int hei , int wit , int n , int f , c
 
 	for(i=0;i<pop->size;i++)		// uzupelnienie planszy
 		{
+		if(is_edge( pop->c[i].x , pop->c[i].y , mat->n , mat->m))
+			{
+			printf("\nPLANSZA JEST ZA MALA NA TE DANE\nPOWIEKSZ PLANSZE ZWIEKSZAJAC -n I -m W PARAMATRACH\n");
+			exit ( EXIT_FAILURE);	
+			}
 		mat->board[pop->c[i].x][pop->c[i].y]=1;
 		}
 
